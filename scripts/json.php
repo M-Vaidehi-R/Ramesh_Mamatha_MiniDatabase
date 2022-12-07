@@ -10,7 +10,7 @@
     $label = "id";
 
     //Return all results
-    $getContent = getAll('tbl_mini_name');
+    $getContent = getAll('tbl_miniapp');
 
     //Return Single Result
     //$getContent = getSingle('tbl_portfolio', 'marvel_id', '2');
