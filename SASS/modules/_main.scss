@@ -1,0 +1,20 @@
+body{
+    background-color: rgb(246, 246, 140);
+    font-family: 'Noto Serif KR', serif;
+}
+
+nav ul li img{
+    display: block;
+    margin: auto;
+    padding-top:2em;
+    padding-bottom: 2em;
+}
+
+nav ul li img:hover{
+    background-color: rgb(176, 187, 230);
+}
+
+.get-to-know{
+    background-image: url(../Images/mini-header3.jpg);
+    padding: 4rem;
+}
