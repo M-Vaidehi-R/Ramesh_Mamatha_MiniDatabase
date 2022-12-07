@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/main.css">
+    <title>Mini-App</title>
+</head>
+<body>
+    <h1 hidden>Mini Cooper Main Page</h1>
+
+    <header class="header">
+        <div id="logo">
+            <img src="Images/Logos/logo-mobile.svg" alt="logo">
+        </div>
+
+        <div class="navigation">
+        <div class="main-nav">
+            <a href="#app">Electric</a>
+            <a href="#app">3 Door</a>
+            <a href="#app">5 Door</a>
+            <a href="#app">Convertible</a>
+            <a href="#app">Shop Now</a>
+        </div>   
+        </div>
+            
+            <div class="hamburger">
+                <div class="hm line1"></div>
+                <div class="hm line2"></div>
+                <div class="hm line3"></div>
+            </div>
+    </header>
+
+    <div class="header-img">
+    <img src="Images/mini-header2.jpg" alt="header">
+    </div>
+
+    <section class="mini-innovation">
+        <h2>Mini Connected</h2>
+        <h3>Innovation Made Seamless</h3>
+        <p>MINI’s premium cockpit technology makes your motoring experience as convenient as it is thrilling. 
+            Thoughtfully designed with our drivers in mind, our technology integrates a host of innovative infotainment apps and intelligent services into an easy-to-use 6.5” or 8.8” Touchscreen interface, positioned in the centre of the dash. So no matter where you are, 
+            or where the road takes you, you’ll always have a seamless connection to the world around you – right at your beck-and-call.</p>
+    </section>
+
+
+    <main id="app">
+        <minilb @closelb="this.showLightBox=false" v-if="showLightBox" :mini="lightboxData"></minilb>
+        <nav id="carID">
+            <ul id="car-img">
+            <minithumb @loadlb="loadLightBox" v-for="mini in miniData" :mini="mini"></minithumb>
+        </ul>
+        </nav>
+    </main>
+
+    <h2 class="tagline">DISCOVER THE FUN IN FUNCTIONALITY</h2>
+
+    <section class="get-to-know">
+
+        <h3>Whats your name?</h3>
+
+        <form id="contact-form">
+            <label for="firstname" hidden>First Name</label>
+            <input type="text" id="firstname" name="firstname" required="required" placeholder="FIRST NAME">
+
+            <label for="email" hidden>Email</label>
+            <input type="email" id="email" name="email" required placeholder="E-MAIL">
+
+            <input type="submit" class="submit" value="Continue">
+        </form>
+
+        <P>Stay informed about news, special offers, products and services from or on behalf of MINI Canada.</P>
+    </section>
+
+    <section class="mini-innovation">
+        <h2>Iconic Design</h2>
+        <h3>Its Good to be Different</h3>
+        <p>MINI has always embraced difference. Since 1959, our Owners saw their MINI as an extension of their own unique selves. 
+            They customized it to reflect their personal style. They turned it into a symbol of individuality and self-expression. 
+            They defied the idea that a car is just a car, and in turn, defined us. So here’s to thinking different.
+            It’s what makes us see beyond the similar and open our minds to a bigger view. It’s what drives our world forward.</p>
+    </section>
+
+    <section class="gallery">
+        <h2 hidden>Gallery</h2>
+        <div class="electric three-items">
+            <h3 hidden>Electric</h3>
+            <img src="Images/lightBox2/one-electric.jpg" alt="electric">
+            <img src="Images/lightBox2/two-electric.jpg" alt="electric">
+            <img src="Images/lightBox2/three-electric.jpg" alt="electric">
+        </div>
+
+        <div class="threeDoor three-items">
+            <h3 hidden>Electric</h3>
+            <img src="Images/lightBox2/one-3.jpg" alt="3door">
+            <img src="Images/lightBox2/two-3.jpg" alt="3door">
+            <img src="Images/lightBox2/three-3.jpg" alt="3door">
+        </div>
+
+        <div class="fiveDoor three-items">
+            <h3 hidden>Electric</h3>
+            <img src="Images/lightBox2/one-5.jpg" alt="5door">
+            <img src="Images/lightBox2/two-5.jpg" alt="5door">
+            <img src="Images/lightBox2/three-5.jpg" alt="5door">
+        </div>
+
+        <div class="convertible three-items">
+            <h3 hidden>Electric</h3>
+            <img src="Images/lightBox2/one-convert.jpg" alt="convertible" width="40%">
+            <img src="Images/lightBox2/two-convert.jpg" alt="convertible">
+            <img src="Images/lightBox2/three-convert.jpg" alt="convertible" width="40%">
+        </div>
+    </section>
+
+    <section class="shop">
+
+        <div class="shop-opt two-items">
+        <a href="#app" style="color:white; font-size: xx-large;">SHOP:</a>
+        <a href="#app">ELECTRIC</a>
+        <a href="#app">3 DOOR</a>
+        <a href="#app">5 DOOR</a>
+        <a href="#app">CONVERTIBLE</a>
+        </div>
+    </section>
+
+
+
+    <video muted autoplay loop="loop"><source src="https://86bd04aee645f41c2005-510904abdc95bfe9a6b152d3edc0036b.ssl.cf5.rackcdn.com/Public/img/2016-739165/content/electric/fast-facts.mp4?v=NwY8tz2G0hI8N6iLlo2v8m4NZBYEb6Dj3jJYlFRgPBM1"></video>
+
+    <footer class="footer">
+        <h2 hidden class="footer">Site-footer</h2>
+        <div class="footer-nav">
+            <h3 hidden>Footer nav mini</h3>
+            <h4>Contact Us</h4>
+            <h4>Privacy Policy</h4>
+            <h4>FAQs</h4>
+        </div>
+      
+        <img src="Images/Logos/logo-mobile.svg" alt="footer-logo">
+    </footer>
+    
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="JS/main.js" type="module" defer></script>
+</body>
+</html>
